@@ -127,8 +127,11 @@ def log_application(job_title: str, company_name: str, filepath: str, log_file: 
     }
     log = []
     if os.path.exists(log_file):
+    try:
         with open(log_file, "r") as f:
             log = json.load(f)
+    except (json.JSONDecodeError, ValueError):
+        log = []
     log.append(entry)
     with open(log_file, "w") as f:
         json.dump(log, f, indent=2)
