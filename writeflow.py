@@ -1,6 +1,6 @@
 """
 WriteFlow Production - Cover Letter & Document Generator
-AI-powered writing assistant for job seekers.
+Template-based cover letter generator (Python stdlib only, no AI API).
 Author: Manoj Kumar Kavuri
 """
 
